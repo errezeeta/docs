@@ -149,7 +149,7 @@
           },
           {
             "group": "Webhook types",
-            "pages": ["webhooks/alert/alert-webhook", "webhooks/assessment/assessment-webhook", "webhooks/sensor/sensor-webhook"]
+            "pages": ["webhooks/alert/alert-webhook"]
           }
         ]
       }
