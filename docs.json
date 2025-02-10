@@ -3,8 +3,8 @@
   "name": "TrueCold",
   "colors": {
     "primary": "#3B82F6",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#3B82F6",
+    "dark": "#3B82F6"
   },
   "favicon": "/favicon.png",
   "versions": ["v1"],
