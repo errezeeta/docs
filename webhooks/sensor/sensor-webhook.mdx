@@ -1,0 +1,29 @@
+---
+title: Sensor
+description: Receive real-time notifications about the status of your sensors
+icon: router
+---
+
+The Sensor Webhook allows you to receive real-time notifications about the status of your sensors. This document provides an overview of how to set up and use the Sensor Webhook.
+
+## Sensor Event types
+
+The Alert Webhook sends notifications for the following event types:
+
+- `sensor.created` : Triggered when a new sensor has been linked to an entity.
+- `sensor.updated` : Triggered when the status of a sensor link has been changed.
+
+## Event Payload
+
+When an alert is triggered, the app will send request to your webhook endpoint with the following payload:
+
+```json
+{
+    "event": "sensor.created",
+    "data": {
+        "id": "33afebfa-14da-4ce8-add9-597b63e2bdd8",
+        "account_id" : "33afebfa-14da-4ce8-add9-597b63e2bdd8",
+        "entity_id" : "33afebfa-14da-4ce8-add9-597b63e2bdd8"
+    }
+}
+```

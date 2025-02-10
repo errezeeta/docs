@@ -142,9 +142,15 @@
       },
       {
         "tab": "Webhooks",
-        "pages": [
-          "webhooks/quickstart",
-          "webhooks/alert/alert-webhook"
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["webhooks/quickstart"]
+          },
+          {
+            "group": "Webhook types",
+            "pages": ["webhooks/alert/alert-webhook", "webhooks/assessment/assessment-webhook", "webhooks/sensor/sensor-webhook"]
+          }
         ]
       }
     ]
