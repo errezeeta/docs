@@ -1,13 +1,13 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "TrueCold",
   "colors": {
-    "primary": "#16A34A",
+    "primary": "#3B82F6",
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
+  "versions": ["v1"],
   "navigation": {
     "tabs": [
       {
@@ -39,43 +39,31 @@
         "openapi": {
           "source": "./openapi.json"
         }
+      },
+      {
+        "tab": "Webhooks",
+        "pages": [
+          "webhooks/quickstart",
+          "webhooks/alert/alert-webhook"
+        ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+      "label": "Contact Us",
+      "href": "mailto:support@truecold.io"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "App",
+      "href": "https://app.truecold.io"
     }
   },
   "footer": {

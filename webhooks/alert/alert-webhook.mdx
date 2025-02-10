@@ -1,0 +1,36 @@
+---
+title: Alert
+description: Receive real-time notifications about important events in your alerts
+icon: circle-exclamation
+---
+
+The Alert Webhook allows you to receive real-time notifications about important events in your system. This document provides an overview of how to set up and use the Alert Webhook.
+
+## Alert Event types
+
+The Alert Webhook sends notifications for the following event types:
+
+- `alerts.created` : Triggered when a new alert has been generated on some entity linked with a sensor.
+- `alerts.updated` : Triggered when an existing alert has been updated.
+
+## Event Payload
+
+When an alert is triggered, the app will send request to your webhook endpoint with the following payload:
+
+```json
+{
+    "event": "alerts.created",
+    "data": {
+        "id": "33afebfa-14da-4ce8-add9-597b63e2bdd8",
+        "account_id" : "33afebfa-14da-4ce8-add9-597b63e2bdd8",
+        "created_at": "2021-10-01T12:00:00Z",
+        "delivery_id" : "33afebfa-14da-4ce8-add9-597b63e2bdd8",
+        "code": "292",
+        "status": "OPEN",
+        "max_temp": "21.148438",
+        "min_temp": "36.433594",
+        "excursion_minutes": "5",
+        "temperature_range_id": "c1b8403c-f9b5-4e55-933f-a7c723e65fcc"
+    }
+}
+```
