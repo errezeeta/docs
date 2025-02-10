@@ -15,30 +15,130 @@
         "groups": [
           {
             "group": "Get Started",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
+            "pages": ["documentation/introduction", "documentation/quickstart"]
           }
         ]
       },
       {
         "tab": "API Reference",
-        "openapi": {
-          "source": "./openapi.json"
-        }
+        "version": "v1",
+        "pages": [
+          {
+            "group": "Account",
+            "icon" : "folder",
+            "pages": [
+              "api-reference/account/returns-the-account-information",
+              "api-reference/account/updates-the-account-information"
+            ]
+          },
+          {
+            "group": "Shipments",
+            "icon" : "folder",
+            "pages": [
+              "api-reference/shipments/returns-all-the-shipments-from-the-account",
+              "api-reference/shipments/returns-a-single-shipment",
+              "api-reference/shipments/updates-one-or-several-properties-of-a-shipment",
+              "api-reference/shipments/links-a-shipment-to-a-sensor",
+              "api-reference/shipments/updates-the-status-of-the-sensor-linked-to-the-shipment",
+              "api-reference/shipments/deletes-a-shipment-based-on-its-id"
+            ]
+          },
+          {
+            "group": "Deliveries",
+            "icon" : "folder",
+            "pages": [
+              {
+                "group" : "Delivery Items",
+                "icon" : "folder",
+                "pages" : [
+                  "api-reference/delivery-item/delete-delivery-item"
+                ]
+              },
+              "api-reference/delivery/get-deliveries",
+              "api-reference/delivery/create-delivery",
+              "api-reference/delivery/update/update-delivery-carrier",
+              "api-reference/delivery/update/update-delivery-receiver",
+              "api-reference/delivery/update/update-delivery-temperature-range",
+              "api-reference/delivery/update-delivery"
+            ]
+          },
+          {
+            "group": "Handling Units",
+            "icon" : "folder",
+            "pages": [
+              "api-reference/handling-unit/get-handling-units",
+              "api-reference/handling-unit/create-handling-unit",
+              "api-reference/handling-unit/duplicate-handling-units",
+              "api-reference/handling-unit/update-handling-unit",
+              "api-reference/handling-unit/delete-handling-units"
+            ]
+          },
+          {
+            "group" : "Alerts",
+            "icon" : "folder",
+            "pages" : [
+              "api-reference/alert/get-alerts",
+              "api-reference/alert/update-alert"
+            ]
+          },
+          {
+            "group" : "Materials",
+            "icon" : "folder",
+            "pages" : [
+              "api-reference/material/create-new-material",
+              "api-reference/material/update-material",
+              "api-reference/material/update-many-materials-temperature-range",
+              "api-reference/material/delete-material",
+              "api-reference/material/delete-many-materials"
+            ]
+          },
+          {
+            "group" : "Temperature Range",
+            "icon" : "folder",
+            "pages" : [
+              "api-reference/temperature-range/get-temperature-ranges",
+              "api-reference/temperature-range/create-new-temperature-range",
+              "api-reference/temperature-range/update-temperature-range",
+              "api-reference/temperature-range/delete-temperature-range"
+            ]
+          },
+          {
+            "group": "Sensors",
+            "icon" : "folder",
+            "pages": [
+              {
+                "group" : "Links",
+                "icon" : "folder",
+                "pages" : [
+                  {
+                    "group" : "Delivery",
+                    "icon" : "folder",
+                    "pages" : [
+                      "api-reference/sensors/link/delivery/link",
+                      "api-reference/sensors/link/delivery/update-status-by-delivery"
+                    ]
+                  },
+                  {
+                    "group" : "Shipment",
+                    "icon" : "folder",
+                    "pages" : [
+                      "api-reference/sensors/link/shipment/link",
+                      "api-reference/sensors/link/shipment/update-status-by-shipment"
+                    ]
+                  },
+                  {
+                    "group" : "Handling Unit",
+                    "icon" : "folder",
+                    "pages" : [
+                      "api-reference/sensors/link/handlingUnit/link",
+                      "api-reference/sensors/link/handlingUnit/update-status-by-handling-unit"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "tab": "Webhooks",

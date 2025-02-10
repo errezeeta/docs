@@ -1,0 +1,51 @@
+---
+title: "Introduction"
+description: "Easy to follow guide to connect with Public TrueCold's API"
+icon: "hand-wave"
+---
+
+### Getting started
+
+Welcome! Read this page to learn a bit more about TrueCold Public API and how to integrate your data-input tools with our platform.&#x20;
+
+<Tip>
+  If you want to book a demo, get in contact with [support@truecold.io](mailto:support@truecold.io).
+</Tip>
+
+### 1. Security
+
+At TrueCold we take security very seriously, so our API validates every request. We make sure that the right scope is returned every time. To do so, we use **private API keys**. To get one, log in at [truecold.io](https://truecold.io) and head to the *account* page. Under the *Api credentials* page, you will be able to generate or delete your api keys.&#x20;
+
+<Warning>
+  Due to security reasons, you **will only see your api key once**. Make sure you save it properly.&#x20;
+</Warning>
+
+You will need to have the role **ADMIN** to be able to manage API keys. If you have any questions, get in contact with our [Support Team](mailto:support@truecold.io).
+
+In every request, you will need to provide an API key in the headers:
+
+```
+x-api-key: tc_your-api-key
+```
+
+### 2. Rate limits
+
+To ensure that everyone can use our API, we allow up to **5 requests every 10 seconds** (sliding window). If you think you need more requests per 10 seconds, please, contact with our [Support Team](mailto:support@truecold.io) and we will study your case individually.&#x20;
+
+If you exceed that amount of requests, you will receive a `429 Too Many Requests` response, with the following structure:&#x20;
+
+```
+{
+  isError: true,
+  message: "Rate limit exceeded",
+  limit: 5,
+  reset: 4
+}
+```
+
+| property | type    | description                                                                    |
+| -------- | ------- | ------------------------------------------------------------------------------ |
+| isError  | boolean | If *true*, api calls exceeded limits.                                          |
+| message  | string  | Gives information about the error.                                             |
+| limit    | number  | Maximum api calls per 10 seconds.                                              |
+| reset    | number  | Time in seconds until you sliding window finishes and you can make a new call. |
